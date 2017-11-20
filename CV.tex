@@ -1,19 +1,32 @@
 \documentclass{my_cv}
+\usepackage{multirow}
 \normalsize
+
 \begin{document}
+
+\newlength{\colOne}
+\setlength{\colOne}{\dimexpr (\textwidth-24pt)/10 \relax}
+\newlength{\colTwo}
+\setlength{\colTwo}{\dimexpr (\textwidth-24pt)/3 \relax}
+
+
+
 \myName{Yadong}{Jiang}
 
 %Personal Data
 \section{Personal Data}
 
-\begin{tabular}{p{40pt}  p{170pt}  p{40pt}  p{170pt}}
-Nationality: & Chinese & Address: & Jayme Rios de Souza\\
+\noindent\hspace{24pt}
+\begin{tabular}{p{\colOne} p{\colTwo} p{\colOne} p{\colTwo}}
+Nationality: & Chinese & Address: & \multirow{4}{*}{\shortstack[l]{Chenggong Hongshuling 3rd Building\\ Chenhui East Road, 1501 \\ Jinjiang district, Chengdu, Sichuan\\ P.R. China}}\\
 
-Birthday: & 1990 Oct & & Rua Joaquim Kopke, 112\\
+Birthday: & 1990 Oct & & \\
 
-Email: & \href{mailto:yadong.jiang@iusspavia.it}{yadong.jiang@iusspavia.it} & & 4200-346 Porto, Portugal\\
+Gender: & Male & & \\
 
-Phone: & (+351) 910-275-117\\
+Email: & \href{mailto:yadong.jiang@iusspavia.it}{yadong.jiang@iusspavia.it} & & \\
+
+Phone: & (+351) 910-275-117 & & \\
 
 \end{tabular}
 
@@ -22,43 +35,35 @@ Phone: & (+351) 910-275-117\\
 \section{Education}
 
 \period{
-    Current
-    
-    2014 Sep
+    Sep. 2014$\sim$Current
 }{
-    \textbf{PhD candidate}, Earthquake Engineering and Engineering Seismology, ROSE Programme
+    \textbf{PhD candidate}, Earthquake Engineering and Engineering Seismology, ROSE Programme\\
     
-    Istituto Universitario di Studi Superiori di Pavia (IUSS), Pavia, Italy
+    Istituto Universitario di Studi Superiori di Pavia (IUSS), Pavia, Italy\\
     
-    \hangindent=41pt
-    Thesis: Seismic Assessment of Composite Frames with Concrete-Filled Steel Tube Columns
+    Thesis: Seismic Assessment of Composite Frames with Concrete-Filled Steel Tube Columns\\
     
     Advisors: Jose Miguel Castro and Ricardo Monteiro
 }
 
 \period{
-    2014 May
-    
-    2012 Sep
+    Sep. 2012$\sim$May. 2014
 }{
-    \textbf{Master of Science}, Earthquake Engineering and Engineering Seismology, ROSE Programme
+    \textbf{Master of Science}, Earthquake Engineering and Engineering Seismology, ROSE Programme\\
     
-    Istituto Universitario di Studi Superiori di Pavia (IUSS), Pavia, Italy
+    Istituto Universitario di Studi Superiori di Pavia (IUSS), Pavia, Italy\\
     
-    \hangindent=41pt
-    Thesis: \hspace{5pt} Experimental and Numerical Behavior Assessment of Rubberized Concrete Filled Steel Tube
+    Thesis: Experimental and Numerical Behavior Assessment of Rubberized Concrete Filled Steel Tube\\
     
     Advisors: Jose Miguel Castro and Ricardo Monteiro
 }
 
 \period{
-    2012 Jun
-    
-    2008 Sep
+    Sep. 2008$\sim$Jun. 2012
 }{
-    \textbf{Bachelor}, Civil Engineering
+    \textbf{Bachelor}, Civil Engineering\\
     
-    Tongji University, Shanghai, P.R. China
+    Tongji University, Shanghai, P.R. China\\
     
     GPA: 4.23/5.0 (five-level grading system)
 }
@@ -66,35 +71,32 @@ Phone: & (+351) 910-275-117\\
 \section{Research \& Professional Experiences}
 
 \period{
-    2016 May
-    
-    2016 Feb
+    Feb. 2016$\sim$May. 2016
 }{
-    \textbf{Research Assistant}, Department of Civil and Environmental Engineering (CEE), Hong Kong Polytechnic University
+    \textbf{Research Assistant}, Department of Civil and Environmental Engineering (CEE)\\
+
+    Hong Kong Polytechnic University, Hong Kong\\
     
-    \hangindent=57pt
-    Project Title: Application of Polygonal High Strength Concrete-filled composite Column in Seismic-resistant Buildings in Hong Kong
+    \hangindent=61pt
+    Project Title: Application of Polygonal High Strength Concrete-filled composite Column in Seismic-resistant Buildings in Hong Kong\\
     
-    Supervisor: \hspace{4pt} Tak-Ming Chan
+    Supervisor: Tak-Ming Chan
 }
 
 \period{
-    2015 Feb
-    
-    2014 Jan
+    Jan. 2014$\sim$Feb. 2015
 }{
-    \textbf{Research Assistant}, Faculty of Engineering, University of Porto
+    \textbf{Research Assistant}, Faculty of Engineering\\
+    University of Porto, Porto, Portugal\\
     
-    \hangindent=60pt
-    Project Title: Recycling \& Seismic Protection: Sustainable High Performance Concrete-Filled Steel Tubular (CFST) Columns for Seismic Areas
+    \hangindent=55pt
+    Project Title: Recycling \& Seismic Protection: Sustainable High Performance Concrete-Filled Steel Tubular (CFST) Columns for Seismic Areas\\
     
-    Supervisor: \hspace{8pt} Jose Miguel Castro
+    Supervisor: Jose Miguel Castro
 }
 
 \period{
-    2012 Apr
-    
-    2012 Feb
+    Feb. 2012$\sim$Apr. 2012
 }{
     \textbf{Internship}, Metro tunnel crack check, Shanghai, P.R. China    
 }
@@ -102,34 +104,33 @@ Phone: & (+351) 910-275-117\\
 %Skills
 \section{Skill Sets}
 
-\begin{tabular}{p{210pt} p{219pt}}
-    Finite Element Modelling and Analysis & Matlab Scripting \\
-    Python, C++ language Programming & Auto CAD Engineering Drawing
+\def\arraystretch{1.5}
+\begin{tabular}{p{\dimexpr \colOne+\colTwo \relax} p{\dimexpr \colOne+\colTwo \relax}}
+    \multicolumn{2}{l}{\textbullet\ ABAQUS / OpenSees / RUAUMOKO/ SeismoStruct Modelling and Analysising} \\
+    \textbullet\ Incremental Dynamic Analysis (IDA) & \textbullet\  Seismic Design \\
+    \textbullet\ Material Development in OpenSees & \textbullet\ Matlab Scripting \\
+    \textbullet\ Python / C++ / C\# language Programming & \textbullet\ Auto CAD Engineering Drawing\\
+    \textbullet\ Word / Excel / PowerPoint Processing & \textbullet\ \LaTeX Basics
 \end{tabular}
+
 
 %Scholarships
 \section{Scholarships}
 
 \period{
-    2017 Aug
-    
-    2014 Sep
+    Sep.2014$\sim$Aug. 2017
 }{
     IUSS Ph.D. Scholarship
 }
 
 \period{
-    2012 Jun
-    
-    2008 Sep
+    Sep. 2012$\sim$May. 2014
 }{
     UME/Tongji MSc Scholarship
 }
 
 \period{
-    2010
-    
-    2008
+    Sep. 2010$\sim$Sep.2012
 }{
     Tongji University Scholarship
 }
